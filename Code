@@ -1,0 +1,32 @@
+Hi I am a Python Beginner
+Python Turtle
+sparkling star coding myself, my star has a hollow pentagon, hope you can do it better
+
+
+import turtle
+import random
+import time
+screen = turtle.Screen()
+turtle.bgcolor("black")
+star = turtle.Turtle()
+star.speed(0)
+star.hideturtle()
+def draw_star(size, color):
+    star.penup()
+    star.goto(0, 0)
+    star.pendown()
+    star.color(color)
+    star.begin_fill()
+    for i in range(5):
+        star.fd(size)
+        star.right(144)
+    star.end_fill()
+colors = ["yellow", "white", "blue", "gold", "red"]
+while True:
+    star.clear()
+    color = random.choice(colors)
+    size = random.randint(150, 300)
+    draw_star(size, color)
+    time.sleep(0.3)
+turtle.done()
+    
